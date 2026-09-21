@@ -62,8 +62,11 @@ describe('9.1 BasePage / LoginPage', () => {
   });
 
   it('BasePage cannot be constructed directly', () => {
+    // Graded by `npm run typecheck`, not by this line.
     // @ts-expect-error BasePage is abstract with a protected constructor.
-    expect(() => new BasePage(new FakeDriver(), BASE)).toBeDefined();
+    const attempt = () => new BasePage(new FakeDriver(), BASE);
+    void attempt;
+    expect(true).toBe(true);
   });
 
   it('does not expose the driver to the outside world', () => {
@@ -152,8 +155,11 @@ describe('9.4 StepRecorder', () => {
   });
 
   it('cannot be constructed with new', () => {
+    // Graded by `npm run typecheck`, not by this line.
     // @ts-expect-error the constructor is private; use StepRecorder.start.
-    expect(() => new StepRecorder('x')).toBeDefined();
+    const attempt = () => new StepRecorder('x');
+    void attempt;
+    expect(true).toBe(true);
   });
 });
 

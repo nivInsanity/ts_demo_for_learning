@@ -61,8 +61,11 @@ describe('4.2 exhaustiveness', () => {
   });
 
   it('refuses a non-never argument at compile time', () => {
+    // Graded by `npm run typecheck`, not by this line.
     // @ts-expect-error assertNever only accepts `never`.
-    expect(() => assertNever('definitely reachable')).toBeDefined();
+    const attempt = () => assertNever('definitely reachable');
+    void attempt;
+    expect(true).toBe(true);
   });
 });
 

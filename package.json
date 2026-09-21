@@ -13,7 +13,8 @@
     "typecheck": "tsc --noEmit",
     "progress": "tsx scripts/progress.ts",
     "check": "npm run typecheck && npm run test",
-    "solutions:verify": "tsx scripts/verify-solutions.ts"
+    "solutions:verify": "tsx scripts/verify-solutions.ts",
+    "audit": "tsx scripts/audit.ts"
   },
   "keywords": [
     "typescript",

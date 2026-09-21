@@ -128,10 +128,15 @@ describe('2.4 range', () => {
   });
 
   it('rejects nonsense call shapes at compile time', () => {
+    // Graded by `npm run typecheck`, not by this line - neither call below
+    // is allowed to exist in the first place, so there is nothing to run.
     // @ts-expect-error range needs at least one argument
-    expect(() => range()).toBeDefined();
+    const tooFew = () => range();
     // @ts-expect-error range takes at most three arguments
-    expect(() => range(1, 2, 3, 4)).toBeDefined();
+    const tooMany = () => range(1, 2, 3, 4);
+    void tooFew;
+    void tooMany;
+    expect(true).toBe(true);
   });
 });
 

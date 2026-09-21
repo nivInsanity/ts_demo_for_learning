@@ -24,6 +24,11 @@ describe('7.1 delay / withTimeout', () => {
 
   it('withTimeout propagates the original rejection', async () => {
     const failing = Promise.reject(new Error('boom'));
+    // Silence Node's unhandled-rejection warning for the window before the
+    // starter's `withTimeout` exists to attach its own handler. This does
+    // not weaken the assertion below - `failing` is still the same rejected
+    // promise, and `.rejects.toThrow` still requires withTimeout to surface it.
+    failing.catch(() => undefined);
     await expect(withTimeout(failing, 100, 'failing')).rejects.toThrow('boom');
   });
 

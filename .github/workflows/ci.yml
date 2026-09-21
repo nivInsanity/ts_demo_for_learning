@@ -31,6 +31,13 @@ jobs:
         run: npm test
         continue-on-error: true
 
+      # Structural sanity check on the repo itself, not on your solutions -
+      # catches a module missing a README, a task with no matching test, a
+      # dead link, that kind of thing. See scripts/audit.ts.
+      - name: Repo structure audit
+        run: npm run audit
+        continue-on-error: true
+
       # Always runs, always prints the table, never fails the build.
       # A red X on an exercise repo is demoralising and tells you nothing
       # you did not already know - the percentage is the useful signal.

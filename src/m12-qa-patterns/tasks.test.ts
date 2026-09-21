@@ -85,8 +85,11 @@ describe('12.1 UserBuilder', () => {
   });
 
   it('cannot be constructed directly', () => {
+    // Graded by `npm run typecheck`, not by this line.
     // @ts-expect-error the constructor is private; use UserBuilder.aUser().
-    expect(() => new UserBuilder()).toBeDefined();
+    const attempt = () => new UserBuilder();
+    void attempt;
+    expect(true).toBe(true);
   });
 });
 

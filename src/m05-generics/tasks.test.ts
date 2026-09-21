@@ -74,8 +74,11 @@ describe('5.2 pluck / indexBy', () => {
   });
 
   it('rejects a key that does not exist', () => {
+    // The type error (graded by `npm run typecheck`) is the point. The
+    // runtime check is secondary: `item['nmae']` really is `undefined` for
+    // every item, since nothing in `User` is spelled that way.
     // @ts-expect-error 'nmae' is not a key of User.
-    expect(pluck(users, 'nmae')).toBeDefined();
+    expect(pluck(users, 'nmae')).toEqual([undefined, undefined, undefined]);
   });
 
   it('indexes by a key', () => {

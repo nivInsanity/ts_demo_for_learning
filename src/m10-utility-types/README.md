@@ -1,7 +1,7 @@
 # Module 10 · Utility, mapped and conditional types
 
 > **Files** `tasks.ts` (edit) · `tasks.test.ts` (do not edit)
-> **Graded mostly by** `npm run typecheck`
+> **Run** `npx vitest run src/m10-utility-types` · **graded mostly by** `npm run typecheck`
 
 ## Why this module exists
 

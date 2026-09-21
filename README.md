@@ -6,8 +6,7 @@ write functions from a spec, and make the type checker stop shouting.
 
 Nothing here is a tutorial you read. Everything here is a test you turn green.
 
-<!-- Replace OWNER/REPO once you have pushed this somewhere. -->
-[![CI](https://github.com/OWNER/REPO/actions/workflows/ci.yml/badge.svg)](https://github.com/OWNER/REPO/actions/workflows/ci.yml)
+[![CI](https://github.com/nivInsanity/ts_demo_for_learning/actions/workflows/ci.yml/badge.svg)](https://github.com/nivInsanity/ts_demo_for_learning/actions/workflows/ci.yml)
 
 ---
 
@@ -145,6 +144,7 @@ docs/                       setup, workflow, cheat sheet, strictness
 | `npm run check` | typecheck then tests |
 | `npm run progress` | the table, and rewrite `PROGRESS.md` |
 | `npm run solutions:verify` | maintainer check: do the reference answers pass? |
+| `npm run audit` | maintainer check: is the repo itself internally consistent? |
 
 ## About the solutions
 

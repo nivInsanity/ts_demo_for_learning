@@ -1,0 +1,32 @@
+{
+  "name": "ts-qa-bootcamp",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A hands-on TypeScript bootcamp for QA automation engineers. Broken code to fix, functions to write, tests as the oracle.",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "progress": "tsx scripts/progress.ts",
+    "check": "npm run typecheck && npm run test",
+    "solutions:verify": "tsx scripts/verify-solutions.ts"
+  },
+  "keywords": [
+    "typescript",
+    "qa",
+    "test-automation",
+    "exercises",
+    "learning"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^26.6.2",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.1"
+  }
+}

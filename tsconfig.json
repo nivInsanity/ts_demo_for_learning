@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    /* What JavaScript we target and which built-ins we may use. */
+    "target": "ES2022",
+    "lib": ["ES2023"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+
+    /* We never emit .js here - Vitest transpiles on the fly.
+       `tsc` is used purely as a type checker. */
+    "noEmit": true,
+    "skipLibCheck": true,
+    "types": ["node"],
+
+    /* The strictness that makes TypeScript worth using.
+       Every exercise in this repo is designed to pass under these flags. */
+    "strict": true,
+    "noImplicitOverride": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "forceConsistentCasingInFileNames": true,
+
+    /* Level-up flags - see docs/strictness.md.
+       Turn these on once you finish module 11 and enjoy the pain. */
+    "noUncheckedIndexedAccess": false,
+    "exactOptionalPropertyTypes": false
+  },
+  "include": ["src", "solutions", "scripts", "vitest.config.ts"],
+  "exclude": ["node_modules", ".verify"]
+}

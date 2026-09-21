@@ -1,0 +1,12 @@
+node_modules/
+.verify/
+.progress.json
+.tsc-output.txt
+coverage/
+dist/
+*.log
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json
+Claude outputs/
